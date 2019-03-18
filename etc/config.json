@@ -1,0 +1,48 @@
+{
+  "BindAddress": ":53",
+  "DebugHTTPAddress": "127.0.0.1:5555",
+  "PrimaryDNS": [
+    {
+      "Name": "DNSPod",
+      "Address": "119.29.29.29:53",
+      "Protocol": "udp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "disable",
+        "ExternalIP": "",
+        "NoCookie": true
+      }
+    }
+  ],
+  "AlternativeDNS": [
+    {
+      "Name": "OpenDNS",
+      "Address": "208.67.222.222:443",
+      "Protocol": "tcp",
+      "SOCKS5Address": "",
+      "Timeout": 6,
+      "EDNSClientSubnet": {
+        "Policy": "disable",
+        "ExternalIP": "",
+        "NoCookie": true
+      }
+    }
+  ],
+  "OnlyPrimaryDNS": false,
+  "IPv6UseAlternativeDNS": false,
+  "WhenPrimaryDNSAnswerNoneUse": "PrimaryDNS",
+  "IPNetworkFile": {
+    "Primary": "/etc/overture/ip_network_primary_sample",
+    "Alternative": "/etc/overture/ip_network_alternative_sample"
+  },
+  "DomainFile": {
+    "Primary": "/etc/overture/domain_primary_sample",
+    "Alternative": "/etc/overture/domain_alternative_sample"
+  },
+  "HostsFile": "/etc/overture/hosts_sample",
+  "MinimumTTL": 0,
+  "DomainTTLFile" : "/etc/overture/domain_ttl_sample",
+  "CacheSize" : 0,
+  "RejectQType": [255]
+}
